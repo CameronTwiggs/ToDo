@@ -1,6 +1,6 @@
 * {
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-  border: 1px solid white;
 }
 
 body, html {
@@ -28,19 +28,19 @@ body {
   padding: 0;
   margin: 1em;
   list-style: none;
-  border: solid 3px yellowgreen;
 }
 
 .list-item {
   margin: 1em;
   width: 80%;
   min-height: 20%;
-  max-width: 50%;
+  max-width: 25%;
+  border: solid white 5px;
+  padding: 1em;
 }
 
-.list_title {
-  display: inline-block;
-  width: 4%;
+.list-item__title {
+  border: solid #ffffff 1px;
 }
 
 .item-button {
@@ -56,7 +56,27 @@ body {
   background-color: #ffffff;
 }
 
-/*# sourceMappingURL=styles.css.map */
-/*# sourceMappingURL=styles.sass.map */
+li.drag-sort-active {
+  background: transparent;
+  color: transparent;
+  border: 1px solid #4ca1af;
+}
+
+ul.drag-sort-active {
+  background: transparent;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .list-item {
+    width: 50%;
+    max-width: 50%;
+    min-height: 20%;
+    max-height: 20%;
+  }
+  .item-button {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
