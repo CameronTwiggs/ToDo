@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "index": "nodemon index.js",
-    "database": "nodemon database.js"
+    "database": "nodemon server.js"
   },
   "author": "Cameron Twiggs",
   "license": "ISC",
