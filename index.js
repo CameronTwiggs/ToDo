@@ -99,3 +99,11 @@ document.querySelector('.add-button').addEventListener('click', function(e) {
         updateListeners();
     }});
 
+// function gets tasks from database
+async function getTasks(url){
+    const response = await fetch(url);
+    var data = await response.json();
+    console.log(data);
+}
+
+getTasks("http://54.197.13.168:8080/");
