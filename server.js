@@ -3,6 +3,8 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const https = require('https');
+
 const app = express();
 const port = 8080;
 
@@ -24,7 +26,9 @@ connection.connect(function(err) {  //
     console.log('Connected to database');
 }); // connect to database
 
-app.listen(port, () => console.log(`Listening on port ${port}`)); // listen on port 8080
+https
+    .createServer(app)
+    .listen(port, () => console.log(`Listening on port ${port}`));
 
 
 app.get ('/', (req, res) => {
