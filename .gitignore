@@ -1,6 +1,2 @@
-.vscode
-vscode
-package-lock.json
-styles.css.map
-notes.md
 node_modules
+package-lock.json
