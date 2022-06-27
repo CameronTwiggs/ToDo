@@ -8,9 +8,11 @@ const connection = mysql.createConnection({
     database: 'todoDatabase'
 });
 
+connection.connect()
 
 const sql = 'SELECT * FROM tasks';
 connection.query(sql, function(err, result) {
     if(err) throw err;
    console.log(result);
+   connection.end();
 });
