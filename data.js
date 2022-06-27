@@ -8,11 +8,15 @@ const connection = mysql.createConnection({
     database: 'todoDatabase'
 });
 
-connection.connect()
+// cpmmunicates with the database
+connection.connect(function(err) {  //
+    if(err) throw err;
+    console.log('Connected to database');
+}
+); // connect to database
 
 const sql = 'SELECT * FROM tasks';
 connection.query(sql, function(err, result) {
     if(err) throw err;
    console.log(result);
-   connection.end();
 });
