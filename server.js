@@ -26,10 +26,8 @@ connection.connect(function(err) {  //
     console.log('Connected to database');
 }); // connect to database
 
-https
-    .createServer(app)
-    .listen(port, () => console.log(`Listening on port ${port}`));
 
+app.listen(port, () => console.log(`Listening on port ${port}`)); // listen on port 8080
 
 app.get ('/', (req, res) => {
     const sql = 'SELECT * FROM tasks';
