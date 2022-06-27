@@ -17,7 +17,7 @@ connection.connect(function(err) {  //
     console.log('Connected to database');
 }); // connect to database
 
-app.listen(port, () => console.log(`Listening on port ${port}`)); // listen on port 3000
+app.listen(port, () => console.log(`Listening on port ${port}`)); // listen on port 8080
 
 
 app.get ('/', (req, res) => {
@@ -26,5 +26,9 @@ app.get ('/', (req, res) => {
         if(err) throw err;
         res.send(result);
     });
+}); // send response to client
+
+app.get ('/bruh', (req, res) => {
+    res.send('bruh');
 }); // send response to client
 
