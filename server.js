@@ -8,6 +8,7 @@ const port = 8080;
 const connection = mysql.createConnection({
     host: 'todo-database.cxjiy2ijjdts.us-east-1.rds.amazonaws.com',
     user: 'root',
+    port:  3306,
     password: '[Twigs2112]',
     database: 'todoDatabase'
 });
