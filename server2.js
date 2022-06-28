@@ -19,11 +19,9 @@ app.get('/bruh', (req, res) => {
 } // send response to client
 );
 
-
-var server = https.createServer(options, app);
-server.listen(port, () => {
-    console.log("server starting on port : " + port)
-  });
-
+https
+    .createServer(options, app)
+    .listen(port, () => console.log(`Listening on port ${port}`)); // listen on port 8080
+    
 
 
