@@ -1,9 +1,9 @@
 //create express server
 const express = require('express');
+const helmet = require('helmet');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const https = require('https');
 
 const app = express();
 const port = 8080;
@@ -11,6 +11,8 @@ const port = 8080;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet)
+app.disable('x-powered-by');
 
 
 const connection = mysql.createConnection({
